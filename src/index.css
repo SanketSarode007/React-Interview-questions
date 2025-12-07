@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* then use @layer base / components / utilities or custom stuff as needed */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
