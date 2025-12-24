@@ -2,6 +2,8 @@ import React from 'react';
 import Posts from './Components/Posts';
 import Notifiy from './Components/toast/notification/Notify';
 import  {CinemaSeatBooking}  from './Components/CinemaSeatBooking/CinemaSeatBooking';
+import ReactForm from './Components/React Hook Form/ReactForm';
+import { Board } from './Components/KanbanBoard/Board';
 
 const App: React.FC = () => {
 
@@ -24,15 +26,17 @@ const App: React.FC = () => {
     // </div>
     // <div></div>
    
-    <CinemaSeatBooking 
-    layout={layout} 
-    seatTypes={seatTypes} 
-    bookedSeats={[]} 
-    currency=''
-    onBookingComplete={(booking) => {console.log(booking)}}
-    title='Cinema Hall Booking'
-    Subtitle='Select Your prefered seats'
-    />
+    // <CinemaSeatBooking 
+    // layout={layout} 
+    // seatTypes={seatTypes} 
+    // bookedSeats={[]} 
+    // currency=''
+    // onBookingComplete={(booking) => {console.log(booking)}}
+    // title='Cinema Hall Booking'
+    // Subtitle='Select Your prefered seats'
+    // />
+    // <ReactForm/>
+    <Board/>
   );
 };
 
