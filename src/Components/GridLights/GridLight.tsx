@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useEffect, useState } from "react";
 import { Tile } from "../GridLights/Tile";
 
@@ -19,7 +19,7 @@ export const GridLights: React.FC = () => {
     function handleTileClick(value: number) {
         if (value !== 5 && !clickedTile.includes(value)) {
             setClickedTiles((prev) => {
-                if(prev.length === 7){
+                if (prev.length === 7) {
                     setRemoveTiles(true)
                 }
                 return [...prev, value]
@@ -30,9 +30,9 @@ export const GridLights: React.FC = () => {
     useEffect(() => {
         let interval: number;
         if (removeTile) {
-             interval = setInterval(() => {
+            interval = setInterval(() => {
                 setClickedTiles((prev) => {
-                    if(prev.length === 0){
+                    if (prev.length === 0) {
                         clearInterval(interval)
                         setRemoveTiles(false)
                         return prev

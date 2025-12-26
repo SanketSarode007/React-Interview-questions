@@ -1,43 +1,29 @@
 import React from 'react';
 import Posts from './Components/Posts';
 import Notifiy from './Components/toast/notification/Notify';
-import  {CinemaSeatBooking}  from './Components/CinemaSeatBooking/CinemaSeatBooking';
-import ReactForm from './Components/React Hook Form/ReactForm';
+import { CinemaSeatBooking } from './Components/CinemaSeatBooking/CinemaSeatBooking';
 import { Board } from './Components/KanbanBoard/Board';
+import { Route, Routes } from "react-router";
+import { GridLights } from "./Components/GridLights/GridLight"
+import { LightsOut } from "./Components/LightsOut/LightOuts";
+import ReactForm from "./Components/React Hook Form/ReactForm";
+import { Suduko } from "./Components/SudukoValidator/Suduko"
+import { Home } from "./Components/Home";
 
 const App: React.FC = () => {
 
-  const layout = {
-    rows: 8,
-    seatPerRows: 12,
-    aislePosition: 5
-  }
-
-  const seatTypes = {
-    regular: { name: 'Regular', price: 150, rows: [0, 1, 2] },
-    premium: { name: 'Premium', price: 250, rows: [3, 4, 5] },
-    vip: { name: 'VIP', price: 350, rows: [6, 7] }
-  }
-
   return (
-    // <div className='flex justify-center items-center h-screen'>
-    //   {/* <Posts/> */}
-      // <Notifiy id='1' title='Title' description='Description'/>
-    // </div>
-    // <div></div>
-   
-    // <CinemaSeatBooking 
-    // layout={layout} 
-    // seatTypes={seatTypes} 
-    // bookedSeats={[]} 
-    // currency=''
-    // onBookingComplete={(booking) => {console.log(booking)}}
-    // title='Cinema Hall Booking'
-    // Subtitle='Select Your prefered seats'
-    // />
-    // <ReactForm/>
-    <Board/>
-  );
-};
+    <div>
+      <Routes>
+        <Route index element={<Home />}></Route>
+        <Route path="/kanbanboard" element={<Board />} />
+        <Route path="/gridlights" element={<GridLights />} />
+        <Route path="/lights-out" element={<LightsOut />} />
+        <Route path="/react-hook-form" element={<ReactForm />} />
+        <Route path="/suduko" element={<Suduko />} />
+      </Routes>
+    </div>
+  )
+}
 
 export default App;

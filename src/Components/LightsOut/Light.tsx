@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface lightProps{
     light: number;
     On: number[];
