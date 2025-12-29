@@ -7,9 +7,13 @@ export async function getPosts(): Promise<PostData[]>{
     return postsResponse.posts;
 }
 
-console.log("C")
 
 export async function getOnePost(id: string): Promise<PostData>{
     const response = await api.get(`/posts/${id}`)
     return response.data;
+}
+
+export async function getUsers(colName:string, orderBy: string) {
+    const response = await api.get(`users`)
+    return response.data.users
 }

@@ -9,6 +9,7 @@ import { LightsOut } from "./Components/LightsOut/LightOuts";
 import ReactForm from "./Components/React Hook Form/ReactForm";
 import { Suduko } from "./Components/SudukoValidator/Suduko"
 import { Home } from "./Components/Home";
+import DebounceSearch from './Components/DebounceSearch/DebounceSearch';
 
 const App: React.FC = () => {
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/lights-out" element={<LightsOut />} />
         <Route path="/react-hook-form" element={<ReactForm />} />
         <Route path="/suduko" element={<Suduko />} />
+        <Route path="/debounce" element={<DebounceSearch />} />
       </Routes>
     </div>
   )

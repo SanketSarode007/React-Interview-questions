@@ -28,7 +28,7 @@ export const GridLights: React.FC = () => {
     }
 
     useEffect(() => {
-        let interval: number;
+        let interval: NodeJS.Timeout
         if (removeTile) {
             interval = setInterval(() => {
                 setClickedTiles((prev) => {
